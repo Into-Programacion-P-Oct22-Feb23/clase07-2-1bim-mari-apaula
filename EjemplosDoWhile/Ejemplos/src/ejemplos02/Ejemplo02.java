@@ -34,8 +34,9 @@ public class Ejemplo02 {
             System.out.println("Ingrese (s) si desea salir del ciclo ");
             salida = entrada.nextLine();
 
-            if (salida.equals("s")) {
-                bandera = false;
+            if (salida.equals("s") || salida.equals("si") || salida.equals("y")
+                   || salida.equals("yes")) {  /* en el or || no 
+                bandera = false;                  todo debe ser verdadadero*/
             }
 
         } while (bandera); // (bandera==true)

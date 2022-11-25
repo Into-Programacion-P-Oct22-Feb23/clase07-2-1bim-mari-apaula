@@ -13,7 +13,7 @@ public class Ejemplo01 {
 
     public static void main(String[] args) {
         int contador = 100;
-        do {
+        do {       // Haga_Hasta
             System.out.printf("%d\n", contador);
             contador = contador + 1;
         } while (contador <= 10);

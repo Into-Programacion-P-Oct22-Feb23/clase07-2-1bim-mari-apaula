@@ -17,7 +17,8 @@ public class Ejemplo03 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        String cadenaFinal = "";
+        double cadenaFinal = 0;
+        String cadenaFina = "";
         double nota;
         boolean bandera = true;
         int salida;
@@ -26,11 +27,13 @@ public class Ejemplo03 {
             System.out.println("Ingrese calificaciones");
             nota = entrada.nextDouble();
             
-            cadenaFinal = String.format("%s%.2f\n", cadenaFinal, 
+            cadenaFina = String.format("%s%s\n", cadenaFina, 
                     nota);
             
             System.out.println("Ingrese (-111) si desea salir del ciclo ");
             salida = entrada.nextInt();
+            
+            cadenaFinal = cadenaFinal + nota;
 
             if (salida == -111) {
                 bandera = false;
@@ -38,7 +41,7 @@ public class Ejemplo03 {
 
         } while (bandera); // (bandera==true)
         
-        cadenaFinal = String.format("%s\n", cadenaFinal);
-        System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
+        
+        System.out.printf("La suma de las notas es\n%.2f\n", cadenaFinal);
     }
 }
